@@ -3,6 +3,16 @@
 # 1. brew install bash-completions
 
 
+# path
+export PYENV_ROOT="$HOME/.pyenv"
+
+export HOMEBREW="/usr/local/bin:/usr/local/sbin"
+
+export GOPATH="/users/chris/Code/gowork/"
+export GOBIN="/users/chris/Code/gowork/bin"
+
+export PATH="$PYENV_ROOT/bin:$HOMEBREW:$GOBIN:$GOPATH$PATH"
+
 # source external scripts
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
@@ -32,16 +42,6 @@ bup (){
 # prompt
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\u@\h \w$(__git_ps1 " (%s)") -> '
-
-# path
-export PYENV_ROOT="$HOME/.pyenv"
-
-export HOMEBREW="/usr/local/bin:/usr/local/sbin"
-
-export GOPATH="/users/chris/Code/gowork/"
-export GOBIN="/users/chris/Code/gowork/bin"
-
-export PATH="$PYENV_ROOT/bin:$HOMEBREW:$GOBIN:$GOPATH$PATH"
 
 # put the pyenv invocations as near the bottom of the script as possible
 eval "$(pyenv init -)"
