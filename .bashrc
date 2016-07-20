@@ -42,4 +42,6 @@ export GOPATH="/users/chris/Code/gowork/"
 export GOBIN="/users/chris/Code/gowork/bin"
 
 export PATH="$PYENV_ROOT/bin:$HOMEBREW:$GOBIN:$GOPATH$PATH"
+
+# put the pyenv invocations as near the bottom of the script as possible
 eval "$(pyenv init -)"
